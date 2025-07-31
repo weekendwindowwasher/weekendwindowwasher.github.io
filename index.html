@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weekend Window Washer | Book Professional Cleaning</title>
+  <title>Window Cleaning & Cleaning Services Genesee County MI | Weekend Window Washer</title>
+  <meta name="description" content="Professional window cleaning and cleaning services in Genesee County, MI. Weekend Window Washer offers streak-free window washing, sanitation, and surface care for homes and businesses. Book your cleaning today!">
+  <meta name="keywords" content="window cleaning, window washing, cleaning services, Genesee County, MI, residential cleaning, commercial cleaning, sanitation, surface care, Weekend Window Washer">
+  <link rel="canonical" href="https://weekendwindowwasher.github.io/">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Window Cleaning & Cleaning Services Genesee County MI | Weekend Window Washer">
+  <meta property="og:description" content="Top-rated window cleaning and cleaning services in Genesee County, MI. Book your streak-free window wash or sanitation service today!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://weekendwindowwasher.github.io/">
+  <meta property="og:image" content="https://weekendwindowwasher.github.io/files/WWW-hero-img.jpg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Window Cleaning & Cleaning Services Genesee County MI | Weekend Window Washer">
+  <meta name="twitter:description" content="Professional window cleaning and cleaning services for homes and businesses in Genesee County, MI.">
+  <meta name="twitter:image" content="https://weekendwindowwasher.github.io/files/WWW-hero-img.jpg">
   <style>
     :root {
       --primary-color: #dd1313;
@@ -269,14 +283,40 @@
       }
     }
   </style>
+  <!-- LocalBusiness Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Weekend Window Washer",
+    "image": "https://weekendwindowwasher.github.io/files/WWW-hero-img.jpg",
+    "telephone": "+1-810-241-8724",
+    "email": "services.weekendwasher@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Genesee County",
+      "addressRegion": "MI",
+      "addressCountry": "US"
+    },
+    "url": "https://weekendwindowwasher.github.io/",
+    "description": "Professional window cleaning, window washing, and cleaning services for homes and businesses in Genesee County, MI. Weekend and evening appointments available.",
+    "openingHours": [
+      "Th 18:00-23:00",
+      "Fr 18:00-23:00",
+      "Sa 09:00-23:00",
+      "Su 09:00-23:00"
+    ],
+    "priceRange": "$"
+  }
+  </script>
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <nav>
     <a href="#top">Home</a>
-    <a href="#why">Why Us</a>
-    <a href="#services">Services</a>
+    <a href="#why">Why Choose Us</a>
+    <a href="#services">Our Services</a>
     <a href="#calendly">Book Now</a>
   </nav>
 
@@ -350,9 +390,8 @@
     <div class="footer-right">
       <h4>Follow Us</h4>
       <div class="socials">
-        <a href="#" title="Facebook">Facebook</a>
-        <a href="#" title="Instagram">Instagram</a>
-        <a href="#" title="LinkedIn">LinkedIn</a>
+        <a href="#" class="coming-soon" title="Facebook">Facebook</a>
+        <a href="#" class="coming-soon" title="Instagram">Instagram</a>
       </div>
     </div>
   </div>
@@ -362,6 +401,14 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.coming-soon').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Coming soon');
+    });
+  });
+</script>
 
 </body>
 </html>
