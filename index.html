@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekend Window Washer | Book Professional Cleaning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #dd1313;
+      --text-color: #333;
+      --bg-light: #f9f9f9;
+      --font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--bg-light);
+      color: var(--text-color);
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    header {
+      background: url('WWW-hero-img.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 1rem;
+      height: 60vh;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header h2, header h3 {
+      margin: 0.5rem 0;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-box h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+/* Add below your existing .service-box h3 styles */
+.service-price {
+  display: block;
+  font-size: 1.1rem;
+  color: #dd1313;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+    .cta {
+      background: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin: 4rem 0 2rem;
+    }
+
+    .cta h2 {
+      margin: 0 0 1rem;
+      font-size: 2rem;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+    }
+
+    .cta button {
+      margin-top: 1rem;
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #f1f1f1;
+    }
+
+    .calendly-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+
+   footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 3rem 1rem 1.5rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 2px solid #dd1313;
+  padding-top: 2rem;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  margin-bottom: 2rem;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p,
+.footer-right h4,
+.footer-right a {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #ccc;
+}
+
+.footer-left a {
+  color: #dd1313;
+  text-decoration: none;
+}
+
+.footer-right h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.hours h4 {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.hours p {
+  margin: 0.2rem 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .cta h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#why">Why Us</a>
+    <a href="#services">Services</a>
+    <a href="#calendly">Book Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="top">
+    <div class="content">
+      <h1>Weekend Window Washer</h1>
+      <h2>A Clear View</h2>
+      <h3>For A Clean Space</h3>
+    </div>
+  </header>
+
+  <!-- Why Us -->
+  <section class="section" id="why">
+    <h2>Why Choose Us?</h2>
+    <p>
+      At <strong>Weekend Window Washer</strong>, our mission is simple: make your space shine—inside and out. Proudly serving Genesee County, MI, we specialize in high-quality window washing, sanitation, and surface cleaning that fits your schedule. Whether it’s your home, office, or storefront—we deliver spotless results with weekend availability and a satisfaction guarantee.
+    </p>
+  </section>
+<!-- Services -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Window Washing</h3>
+      <span class="service-price">$8 per window</span>
+      <p>Streak-free exterior and interior window cleaning for homes, offices, and retail spaces.</p>
+    </div>
+    <div class="service-box">
+      <h3>Sanitation Services</h3>
+      <span class="service-price">$50 per visit</span>
+      <p>Disinfection and surface cleaning to keep your environment healthy, safe, and welcoming.</p>
+    </div>
+    <div class="service-box">
+      <h3>Floor & Surface Care</h3>
+      <span class="service-price">Starting at $30</span>
+      <p>From sweeping and mopping to detailed surface wipe-downs, we keep your floors and high-touch areas spotless.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Book Your Cleaning Appointment Today</h2>
+    <p>Let’s make your home or business sparkle. Pick a time that works for you—we’re here on weekends too!</p>
+    <button onclick="document.getElementById('calendly').scrollIntoView({behavior: 'smooth'})">Schedule Now</button>
+  </section>
+
+  <!-- Calendly Embed -->
+  <div id="calendly" class="calendly-container">
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/services-weekendwasher/30min?text_color=5b5b5b&primary_color=dd1313" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
+  </div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Weekend Window Washer</h3>
+      <p>Serving Genesee County, MI</p>
+      <p>Email: <a href="mailto:services.weekendwasher@gmail.com">services.weekendwasher@gmail.com</a></p>
+      <p>Phone: (810) 241-8724</p>
+      <div class="hours">
+        <h4>Business Hours</h4>
+        <p>Thurs–Fri: 6 PM – 11 PM</p>
+        <p>Sat–Sun: 9 AM – 11 PM</p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <a href="#" title="Facebook">Facebook</a>
+        <a href="#" title="Instagram">Instagram</a>
+        <a href="#" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Weekend Window Washer. All Rights Reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>
